@@ -2,6 +2,6 @@
 Web Design Assistant Project
 
   Grupa IIB5
-  Realizat de:
+  <p>Realizat de:</p>
     Chirica Bianca
     Timofte Calin
