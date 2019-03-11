@@ -1,7 +1,7 @@
 # DesAnt-TW2019
 <h3>Web Design Assistant Project</h3>
-
-  Grupa IIB5
+  Profesor coordonator: Coman Alexandru
+  <p>Grupa IIB5</p>
   <p>Realizat de:</p>
     <ul>
       <li> Chirica Bianca </li>
