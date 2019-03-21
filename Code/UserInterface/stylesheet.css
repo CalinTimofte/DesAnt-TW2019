@@ -1,0 +1,32 @@
+div{
+    padding: 70px 0;
+    text-align: center;
+}
+
+p{
+    text-indent: 50px;
+  letter-spacing: 3px;
+}
+
+hr{
+    border: none;
+    border-top: dashed 0.1rem ;
+}
+
+.button {
+    background-color: white; /* Green */
+    border: 2px solid #e7e7e7;
+    color: black;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius:1%;
+  }
+  
+.button:hover {background-color: #e7e7e7;}
