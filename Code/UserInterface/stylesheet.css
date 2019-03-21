@@ -60,3 +60,15 @@ hr{
   margin-bottom: 0.2%;
   padding: 8px 16px;
 }
+
+.fa-home, .fa-bars{
+  position:absolute;
+}
+
+.fa-home{
+  left:0;
+}
+
+.fa-bars{
+  right:0;
+}
