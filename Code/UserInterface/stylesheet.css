@@ -1,3 +1,13 @@
+html{
+  position: relative;
+  min-height: 100%; /*make footer useable */
+}
+
+body{
+  margin: 0 0 200px;
+  padding:25px; /*prepare a space for the footer to sit on*/
+}
+
 div{
     padding: 70px 0;
     text-align: center;
@@ -17,7 +27,7 @@ hr{
     background-color: white; /* Green */
     border: 2px solid #e7e7e7;
     color: black;
-    padding: 8px 16px;
+    padding: 16px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -30,3 +40,23 @@ hr{
   }
   
 .button:hover {background-color: #e7e7e7;}
+
+.hasBackground{
+    background: #466368;
+    background: -webkit-linear-gradient(#FFFFFF, #A9A9A9);
+    background:    -moz-linear-gradient(#FFFFFF, #A9A9A9);
+    background:         linear-gradient(#FFFFFF, #A9A9A9);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.inputBar{
+  width:20%;
+  border-radius:1%;
+  margin-bottom: 0.2%;
+  padding: 8px 16px;
+}
