@@ -1,0 +1,17 @@
+ /* Text : date de contact 1 */
+ .contact1 {
+	 width : 40%;
+	 text-align : left ;
+	 font-size : 150% ;
+	 margin-top: 5%;
+		margin-left : 15%;
+ }
+ 
+  /* Text : date de contact 2 */
+ .contact2 {
+	 width : 40%;
+	 text-align : left ;
+	 font-size : 150% ;
+		margin-left : 55%;
+ }
+ 
