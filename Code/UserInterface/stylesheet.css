@@ -3,20 +3,31 @@ html{
   min-height: 100%; /*make footer useable */
 }
 
-body{
-  margin: 0 0 200px;
-  padding:25px; /*prepare a space for the footer to sit on*/
-}
-
 div{
     padding: 70px 0;
     text-align: center;
 }
 
-p{
+.textBox{
+  padding: 0 0;
+}
+
+.text{
     text-indent: 50px;
   letter-spacing: 3px;
 }
+
+.input{
+  margin-left: 3%;
+}
+
+.inputBar{
+  width:20%;
+  border-radius:1%;
+  margin-bottom: 0.2%;
+  padding: 1em 2em;
+}
+
 
 hr{
     border: none;
@@ -24,7 +35,7 @@ hr{
 }
 
 .button, i {
-    background-color: white; /* Green */
+    background-color: white; 
     color: black;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
@@ -60,25 +71,48 @@ i:hover{color:#A9A9A9;}
     overflow: hidden;
 }
 
-.inputBar{
-  width:20%;
-  border-radius:1%;
-  margin-bottom: 0.2%;
-  padding: 8px 16px;
-}
 
-.fa-home, .fa-bars{
+.fa-home, .fa-bars, .dropDown{
   position:absolute;
+  left:0;
+  font-size:1.7rem;
 }
 
 .fa-home{
-  left:0;
-  margin-left: 12%;
-  font-size:1.7rem;
+  margin-top: 1%;
+  margin-left:3.2%;
 }
 
-.fa-bars{
-  right:0;
-  margin-right:12%;
-  font-size:1.7rem;
+.fa-bars, .dropDown{
+  margin-top:5%;
+  margin-left:3%
+}
+
+.dropDown{
+  padding: 0 0;
+  text-align: unset;
+  position: relative;
+  display: inline-block;
+}
+
+.dropDownContent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropDownContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropDownContent a:hover {background-color: #f1f1f1}
+
+.dropDown:hover .dropDownContent {
+  display: block;
 }
