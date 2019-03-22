@@ -1,0 +1,85 @@
+/* Footer */
+
+html{
+    position: relative;
+    min-height: 100%; /*make footer useable */
+  }
+
+.hasBackground{
+    background: #466368;
+    background: -webkit-linear-gradient(#FFFFFF, #A9A9A9);
+    background:    -moz-linear-gradient(#FFFFFF, #A9A9A9);
+    background:         linear-gradient(#FFFFFF, #A9A9A9);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 12.5rem;
+    width: 100%;
+    overflow: hidden;
+    z-index:-1;
+}
+
+/* Footer end */
+
+
+/* Title */
+
+.textBox{
+    padding: 0 0;
+    text-align: center;
+  }
+  
+  .text{
+    text-indent: 3.125rem;
+    letter-spacing: 0.1875rem
+  }
+
+/* Title end */
+
+/* Side menu */
+.fa-home, .fa-bars, .dropDown{
+    position:sticky;
+    left:0;
+    font-size:1.7rem;
+  }
+  
+  .fa-home{
+    margin-top: 1%;
+    margin-left:3.2%;
+  }
+  
+  .fa-bars, .dropDown{
+    margin-top:5%;
+    margin-left:3%
+  }
+  
+  .dropDown{
+    padding: 0 0;
+    text-align: unset;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropDownContent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 10rem;
+    box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropDownContent a {
+    color: black;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropDownContent a:hover {background-color: #f1f1f1}
+  
+  .dropDown:hover .dropDownContent {
+    display: block;
+  }
+
+  /* Side Menu End */
