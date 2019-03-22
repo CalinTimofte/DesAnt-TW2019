@@ -29,7 +29,7 @@ html{
     text-align: center;
   }
   
-  .text{
+.text{
     text-indent: 3.125rem;
     letter-spacing: 0.1875rem
   }
@@ -39,8 +39,11 @@ html{
 /* Side menu */
 .fa-home, .fa-bars, .dropDown{
     position:sticky;
+	top: 0;
     left:0;
     font-size:1.7rem;
+	  z-index:1;
+	
   }
   
   .fa-home{
@@ -81,5 +84,15 @@ html{
   .dropDown:hover .dropDownContent {
     display: block;
   }
+  
+   i {
+    background-color: white; 
+    color: black;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  i:hover{color:#A9A9A9;}
 
   /* Side Menu End */
