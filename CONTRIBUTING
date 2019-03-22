@@ -1,1 +1,14 @@
+Cum sa contribui
 
+Pentru a contribui un membru al echipei va trebui neaparat sa aiba un cont de Github.
+
+O modalitate de a propune modificari proiectului este ca un membru sa isi instaleze aplicatia GitHub Desktop si sa se conecteze la contul sau.
+
+Un prim pas este copierea locala a depozitului de cod prin apasarea butonului "Clone a repository" si selectarea unui depozit de cod asociat contului. De asemenea, se va alege un director local in care depozitul de cod va fi clonat.
+Pentru a ne asigura ca avem ultima versiune a codului putem apasa butonul "Fetch origin".
+Pentru realizarea unui nou branch se va apasa butonul "Current branch" -> "New branch" -> se va alege denumirea noului branch si apoi se va apasa butonul "Create branch".
+
+Dupa modificarea fisierelor din directorul ales, acestea vor aparea in sectiunea "Changes" de unde pot fi alese doar acele modificari pe care dorim sa le incapsulam intr-un "commit", acestora fiindu-le atribuite cate o descriere sugestiva.
+Urmatorul pas este sa apasam din meniu butonul "Branch" -> "Merge into current branch" si sa selectam ce ramuri dorim sa unim.
+
+Daca nu exista conflicte, trebuie sa trimitem modificarile facute local la depozitul de cod sursa prin apasarea butonului "Push origin".
