@@ -61,6 +61,7 @@ html{
     text-align: unset;
     position: relative;
     display: inline-block;
+    position: sticky;
   }
   
   .dropDownContent {
