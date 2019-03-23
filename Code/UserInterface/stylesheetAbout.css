@@ -3,7 +3,7 @@
 	 width : 40%;
 	 text-align : left ;
 	 font-size : 150% ;
-	 margin-top: 5%;
+	 margin-top: 3%;
 		margin-left : 15%;
  }
  
@@ -15,3 +15,6 @@
 		margin-left : 55%;
  }
  
+ p{
+	 font-size:0.9em;
+ }
