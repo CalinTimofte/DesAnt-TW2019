@@ -22,25 +22,29 @@
 </p>
 
 <p>
- Aplicatia va analiza o pagina web dupa 3 criterii : 
-<ol>
- <li>Design <br>
-  - 
-  - 
- </li>
-<li>Code quality <br>
--Html validator <br>
--Css validator <br>
--Mobile-Friendliness Check <br>
- </li>
- <li> Performance <br>
-- Popularity Check <br>
-- Website Security Check <br>
-- Loading speed <br>
-- Availability Check <br>
--
-</p>
+Aplicatia va analiza o pagina web dupa 3 criterii : 
+1.Design<br>
+Color Contrast Accessibility Validator <br>
 
+
+2.Code quality <br>
+<ul>
+<li>Html validator</li>
+<li>Css validator</li>
+<li>Responsive</li>
+<li>Compressed images</li>
+<li>Link Checker</li>
+<li>browser compatibility</li>
+</ul>
+
+3.Performance
+<ul>
+ <li>Popularity Check</li> 
+ <li>Website Security Check</li> 
+<li>Loading speed </li>
+<li>Availability Check </li>
+ </ul>
+</p>
 </div>
 
 <!--3rd title -->
