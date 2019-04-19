@@ -12,9 +12,34 @@
 <!--2nd title -->
 <h2><b> 2. Detalii de implementare </b></h2><br>
 <div>
+<p> Vom folosi modelul arhitectural "Model-view-controller" (MVC) utilizat în ingineria software. Succesul modelului se datorează izolării logicii de business față de considerentele interfeței cu utilizatorul, rezultând o aplicație unde aspectul vizual sau/și nivelele inferioare ale regulilor de business sunt mai ușor de modificat, fără a afecta alte nivele.
+ </p>
+<p> Aplicatia utilizeaza sesiuni pentru fiecare client pentru a oferi optiunea de a arata erorile unui site testat anterior de un utilizator si a face comparatii pentru a se vedea progresul. 
+ </p>
+ <p> De asemenea folosim “server sent events” pentru a notifica clientul cand am terminat de procesat statisticile si aceastea pot fi afisate utilizatorului.
+ </p>
+<p> 	Pentru a minimiza timpul de asteptare a clientului vom folosi fire de executie pentru a analiza paginia pe cele trei criterii in mod concurent.
+</p>
 
-
-
+<p>
+ Aplicatia va analiza o pagina web dupa 3 criterii : 
+<ol>
+ <li>Design <br>
+  - 
+  - 
+ </li>
+<li>Code quality <br>
+-Html validator <br>
+-Css validator <br>
+-Mobile-Friendliness Check <br>
+ </li>
+ <li> Performance <br>
+- Popularity Check <br>
+- Website Security Check <br>
+- Loading speed <br>
+- Availability Check <br>
+-
+</p>
 
 </div>
 
@@ -38,22 +63,22 @@
  
  <ul>
  <li> Componenta care asigura comunicarea cu interfata web <br>
-  <p> - Toate datele vor fi trimise si preluate prin aceasta componenta </p>
- </li>
+   - Toate datele vor fi trimise si preluate prin aceasta componenta 
+ </li> <br>
 <li>Comunicarea cu baza de date <br>
 - Popularea bazei de date <br>
 - Si preluarea informatiilor din baza de date <br>
- </li>
+ </li> <br>
 <li> Analizator ( Design Interfata, Cod quality, Performance )
- </li>
+ </li> <br>
  <li> Componenta pentru istoric <br>
  - Ofera optiunea de a alege daca analiza actuala a paginii sa fie comparata cu statistici mai vechi sau nu <br>
  - Foloseste serviciul oferit prin api pentru a gasi varianta mai veche a paginii intr-o arhiva online <br>
-</li>
+</li> <br>
 <li> Componenta Comparator <br>
 - Sa acorde o nota paginii <br>
 - Compara datele actuale cu cele vechi si sa returneze progresul<br>
- </li>
+ </li> <br>
 
  </ul>
  
