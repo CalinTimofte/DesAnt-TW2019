@@ -109,15 +109,7 @@
 
 
   <!--6th title -->
-<h2><b>6. Concluzii </b></h2><br>
-<div>
- 
- 
- 
- </div>
-
-  <!--7th title -->
-<h2><b>7. Bibliografie </b></h2><br>
+<h2><b>6. Bibliografie </b></h2><br>
 <ul>
  <li>www.w3schools.com </li>
 <li>https://uitest.com/check/ </li>
