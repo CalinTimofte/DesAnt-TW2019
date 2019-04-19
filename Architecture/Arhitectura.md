@@ -24,8 +24,9 @@
 <p>
 Aplicatia va analiza o pagina web dupa 3 criterii : <br>
 1.Design<br>
-Color Contrast Accessibility Validator <br>
-
+ <ul>
+  <li>Color Contrast Accessibility Validator</li> <br>
+</ul>
 
 2.Code quality <br>
 <ul>
