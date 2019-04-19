@@ -22,7 +22,7 @@
 </p>
 
 <p>
-Aplicatia va analiza o pagina web dupa 3 criterii : 
+Aplicatia va analiza o pagina web dupa 3 criterii : <br>
 1.Design<br>
 Color Contrast Accessibility Validator <br>
 
