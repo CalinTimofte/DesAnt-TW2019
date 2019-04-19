@@ -36,11 +36,27 @@ Baza de date va consta intr-un singur tabel si va fi populat cu id-ul sesiunii, 
   <!--5th title -->
 <h2><b> 5. Diagrame </b></h2><br>
 <div>
+ <ol>
 <img src="Use Case Diagram.jpg" alt="Diagrama use case">
-<br>
+ <br>
+   <li> Diagrama use case </li>
+ <br>
 <img src="C4 lvl1.jpg" alt="Diagrama C4 nivel 1 : Context ">
 <br>
+  <li>Diagrama C4 nivel 1 : Context </li>
+<br>
+ <img src="C4-level2.png" alt="Diagrama C4 nivel 2 : Container ">
+<br>
+  <li>Diagrama C4 nivel 2 : Container </li>
+ <br>
+  <img src="C4-level3.png" alt="Diagrama C4 nivel 3 : Componente ">
+<br>
+   <li>Diagrama C4 nivel 3 : Componente </li>
+  <br>
+ </ol>
 </div>
+
+
   <!--6th title -->
 <h2><b>6. Concluzii </b></h2><br>
 
