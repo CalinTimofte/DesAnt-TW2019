@@ -36,9 +36,26 @@
 <h2><b> 4. Componente </b></h2><br>
 <div>
  
- 
- 
- 
+ <ul>
+ <li> Componenta care asigura comunicarea cu interfata web <br>
+  <p> - Toate datele vor fi trimise si preluate prin aceasta componenta </p>
+ </li>
+<li>Comunicarea cu baza de date <br>
+- Popularea bazei de date <br>
+- Si preluarea informatiilor din baza de date <br>
+ </li>
+<li> Analizator ( Design Interfata, Cod quality, Performance )
+ </li>
+ <li> Componenta pentru istoric <br>
+ - Ofera optiunea de a alege daca analiza actuala a paginii sa fie comparata cu statistici mai vechi sau nu <br>
+ - Foloseste serviciul oferit prin api pentru a gasi varianta mai veche a paginii intr-o arhiva online <br>
+</li>
+<li> Componenta Comparator <br>
+- Sa acorde o nota paginii <br>
+- Compara datele actuale cu cele vechi si sa returneze progresul<br>
+ </li>
+
+ </ul>
  
  </div>
 
