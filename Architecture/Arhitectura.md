@@ -48,6 +48,27 @@ Aplicatia va analiza o pagina web dupa 3 criterii : <br>
 </p>
 </div>
 
+<p>
+Utilizam servicii oferite de :</p>
+<br>
+<ul>
+ <li>Wayback Machine    // arhiveaza pagini web </li>
+<br>
+Design : <br>
+<li>https://color.a11y.com/Contrast/ // constrast </li>
+<br>
+Code quality : <br>
+ <li>Validator.w3.org // validator html </li>
+ <li>jigsaw.w3.org/css-validator // validator css </li>
+ <li>https://shortpixel.com/image-compression-test // compressed images </li>
+ <li>http://browsershots.org/  // browser compatibility</li>
+ <li>W3C Link Checker</li>
+ <br>
+Performance :<br>
+ <li>developers.google.com/speed/pagespeed/insights   //loading speed </li>
+ <li>https://www.uptrends.com/tools/uptime  // Availability Check </li>
+</ul>
+
 <!--3rd title -->
 <h2><b> 3. Modelarea datelor </b></h2><br>
   <p>     Adresa URL a site-ului ce va fi analizat, este introdusa de utilizator prin formularul pus la dispozitie pe pagina web. Aceasta va fi trimisa prin metoda “POST” catre aplicatia noastra care va analiza site-ul folosindu-se de diferite api-uri preluand datele in format JSON. </p>
