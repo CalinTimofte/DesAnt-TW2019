@@ -20,9 +20,9 @@
  </p>
 <p> 	Pentru a minimiza timpul de asteptare a clientului vom folosi fire de executie pentru a analiza paginia pe cele trei criterii in mod concurent.
 </p>
-
+<br>
 <p>
-Aplicatia va analiza o pagina web dupa 3 criterii : <br>
+<b>Aplicatia va analiza o pagina web dupa trei criterii :</b> <br>
 1.Design<br>
  <ul>
   <li>Color Contrast Accessibility Validator</li> <br>
@@ -56,18 +56,18 @@ Aplicatia va analiza o pagina web dupa 3 criterii : <br>
  <li>Wayback Machine    // arhiveaza pagini web </li>
 <br>
 Design : <br>
-<li>https://color.a11y.com/Contrast/ // constrast </li>
+<li>color.a11y.com/Contrast // constrast </li>
 <br>
 Code quality : <br>
  <li>Validator.w3.org // validator html </li>
  <li>jigsaw.w3.org/css-validator // validator css </li>
- <li>https://shortpixel.com/image-compression-test // compressed images </li>
- <li>http://browsershots.org/  // browser compatibility</li>
+ <li>shortpixel.com/image-compression-test // compressed images </li>
+ <li>browsershots.org/  // browser compatibility</li>
  <li>W3C Link Checker</li>
  <br>
 Performance :<br>
  <li>developers.google.com/speed/pagespeed/insights   //loading speed </li>
- <li>https://www.uptrends.com/tools/uptime  // Availability Check </li>
+ <li>www.uptrends.com/tools/uptime  // Availability Check </li>
 </ul>
 
 <!--3rd title -->
