@@ -48,8 +48,9 @@ Aplicatia va analiza o pagina web dupa 3 criterii : <br>
 </p>
 </div>
 
+<br>
 <p>
-Utilizam servicii oferite de :</p>
+ <b>Utilizam servicii oferite de :</b></p>
 <br>
 <ul>
  <li>Wayback Machine    // arhiveaza pagini web </li>
