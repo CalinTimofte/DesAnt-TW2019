@@ -22,7 +22,7 @@
 </p>
 <br>
 <p>
-<b>Aplicatia va analiza o pagina web dupa trei criterii :</b> <br>
+<b>Aplicatia va analiza o pagina web dupa trei criterii :</b> <br><br>
 1.Design<br>
  <ul>
   <li>Color Contrast Accessibility Validator</li> <br>
@@ -67,7 +67,7 @@ Code quality : <br>
  <br>
 Performance :<br>
  <li>developers.google.com/speed/pagespeed/insights   //loading speed </li>
- <li>www.uptrends.com/tools/uptime  // Availability Check </li>
+ <li>uptrends.com/tools/uptime  // Availability Check </li>
 </ul>
 
 <!--3rd title -->
