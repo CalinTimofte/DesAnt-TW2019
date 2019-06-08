@@ -59,9 +59,9 @@ Design : <br>
 <li>color.a11y.com/Contrast // constrast </li>
 <br>
 Code quality : <br>
- <li>Validator.w3.org // validator html </li>
+ <li>Validator.w3.org // validator html </li>  -- returneaza html
  <li>jigsaw.w3.org/css-validator // validator css </li>
- <li>shortpixel.com/image-compression-test // compressed images </li>
+ <li>shortpixel.com/image-compression-test // compressed images </li> --trebuie dat fix link-ul imaginii, nu a site-ului
  <li>browsershots.org/  // browser compatibility</li>
  <li>W3C Link Checker</li>
  <br>
