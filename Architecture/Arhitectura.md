@@ -52,22 +52,18 @@
 <p>
  <b>Utilizam servicii oferite de :</b></p>
 <br>
-<ul>
- <li>Wayback Machine    // arhiveaza pagini web </li>
-<br>
+
 Design : <br>
-<li>color.a11y.com/Contrast // constrast </li>
+<li>http://wave.webaim.org // constrast </li>
 <br>
 Code quality : <br>
  <li>Validator.w3.org // validator html </li> 
  <li>jigsaw.w3.org/css-validator // validator css </li>
- <li>shortpixel.com/image-compression-test // compressed images </li> 
- <li>browsershots.org/  // browser compatibility</li>
- <li>W3C Link Checker</li>
+ 
  <br>
 Performance :<br>
  <li>developers.google.com/speed/pagespeed/insights   //loading speed </li>
- <li>uptrends.com/tools/uptime  // Availability Check </li>
+
 </ul>
 
 <!--3rd title -->
