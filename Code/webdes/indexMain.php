@@ -6,6 +6,7 @@ require_once 'ApiCalls/Design/designStats.php';
 require_once 'ApiCalls/CodeQuality/codeQualityStats.php';
  require_once 'ApiCalls/Performance/performanceStats.php';
 require_once 'core/dbInteraction.php';
+ require_once 'ApiCalls/Comparator.php';
 
 
  if(!isset($_GET['url']) or $_GET['url'] == '') {
@@ -27,16 +28,16 @@ $response = array("link"=> $url, "count" => $db->get_count() , "results" => $old
 //daca count e 0 atunci e link nou, nu e in bd, altfel, cate intrari vechi a gasit 
 if($response['count']!=0)
 {
-   /* echo json_encode($response['results'][0]['reg_date'], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-    echo '<form method="POST" action="/userInterface/statistici.php">';
+  //  echo json_encode($response['results'][0]['reg_date'], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+    echo '<form method="POST" action="#">';
     echo '<select name="versions">' . '</br>';
     foreach($response['results'] as $result)
     echo '<option value = "' . ($result['id']) . '">' . ($result['reg_date']) . '</option>' . "</br>";
     echo '</select>';
     echo '<input type="submit">';
-    echo '</form>';*/
+    echo '</form>';
 //	alege clientul cum vrea sa fie testat, cu comparare sau fara 
-} //else echo "Nu s-a gasit in baza de date";
+} 
 
 
 
@@ -63,22 +64,15 @@ $statisticiPerformance = $statsPerformance->calculeaza($url);
 
 
 
-// if(isset($_POST['versions'])){
-//     $comparator = new Comparator();
-//     $comparison_result = $comparator->compara($id, $statisticiDesgin["nota"], $statisticiDesgin["numarErori"], $statisticiPerformance["nota"], $statisticiPerformance["numarErori"], $statisticiCodeQuality["nota"], $statisticiCodeQuality["numarErori"]); //comparatorul comunica direct cu componenta care ia date din bd si ia erorile sa compare
-// }
+ if(isset($_POST['versions'])){
+  $id = $_POST['versions'];
+     $comparator = new Comparator();
+     $comparison_result = $comparator->compara($id, $statisticiDesgin["nota"], $statisticiDesgin["numarErori"], $statisticiPerformance["nota"], $statisticiPerformance["numarErori"], $statisticiCodeQuality["nota"], $statisticiCodeQuality["numarErori"]);  
+echo $comparison_result;
 
-// Aici mai este nevoie de o functie care sa afiseze comparatiile cum trebuie
-// De ex, -1 pe primul camp din $comparison_result inseamna : "Nota curenta este mai mica decat cea precedenta";
+   }
 
-// $nota = $comparator->acordaNota(erori categorie 1, 2, 3);
-
-// if(clientul vrea cu comparare a site-ului vechi)
-
-// afiseaza() // stats design, quality,performance, nota, (rezultatul compararii)
-
-
-
+$db->add_entry($url, $statisticiDesgin["numarErori"], $statisticiDesgin["nota"] ,  $statisticiCodeQuality["numarErori"]  , $statisticiCodeQuality["nota"],$statisticiPerformance["numarErori"] ,  $statisticiPerformance["nota"]  );
 
 ?>
 
