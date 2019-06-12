@@ -17,7 +17,7 @@
     <div class="dropDown">
         <i class="fas fa-bars dropbtn"></i>
         <div class="dropDownContent">
-                <a href="statistici.html">Statistics</a>
+                <a href="#">Statistics</a>
                 <a href="about.html">About</a>
         </div>
     </div>
