@@ -38,7 +38,7 @@ class dbInteraction extends dbModel {
 
 
 /*daca un utilizator vrea sa compare cu nota anterioara, functia returneaza intrarea din baza de date 
-(apelata din composer) */
+(apelata din comparator) */
 public function get_entry($id)
 {
     $sql = "SELECT erori_design, nota_design, erori_quality, nota_quality, erori_performance, nota_performance FROM istoricpagini WHERE id = :id LIMIT 1";

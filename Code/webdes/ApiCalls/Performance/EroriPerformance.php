@@ -1,11 +1,22 @@
 <?php
 /* Erori count  performance */
 
-class EroriDesign {
+class EroriPerformance {
 
 	public function calculeaza($stats) {
 
-		$stats = json_decode($stats,true);
+$rez[0]=-1; // nota
+$rez[1]=""; // content
+$rez[2]=0; //numar erori
+
+$stats["lighthouseResult"]['audits']
+
+
+
+
+
+return $rez;
 }
+
 }
 ?>

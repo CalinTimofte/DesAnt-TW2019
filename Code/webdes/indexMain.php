@@ -29,29 +29,47 @@ if($response['count']!=0)
 {
 //	echo json_encode($response['results'], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 //	alege clientul cum vrea sa fie testat, cu comparare sau fara 
-} else echo "Nu s-a gasit in baza de date";
+} //else echo "Nu s-a gasit in baza de date";
 
 
 
 //Calculeaza statistici :
 /* every category returns : nota pt categorie, nr erori, ststisticile specifice*/
 
-// 1. Design
+// 1. Design 
+
+
+/* -- ok
 $statsDesign =new StatsDesign();
 $statisticiDesgin = $statsDesign->calculeaza($url); 
-// din statsDesign se apeleaza functii de la componenta erori care numara erorile si le returneaza in stats si apoi aici
+if($statisticiDesgin["nota"]==-1)
+{
+	echo $statisticiDesgin["descriereEroare"];
+}
+else{ echo "Nota : " . $statisticiDesgin["nota"] ."<br>". $statisticiDesgin["content"] ."<br>". $statisticiDesgin["numarErori"];
+}*/
 
+
+/*
 //2. Code quality
 $statsQuality =new StatsCodeQuality();
 $statisticiCodeQuality = $statsQuality->calculeaza($url); 
+*/
 
 //3.Performance
 
 $statsPerformance =new StatsPerformance();
 $statisticiPerformance = $statsPerformance->calculeaza($url);
 
+if($statisticiPerformance["nota"]==-1)
+{
+	
+	echo $statisticiPerformance["descriereEroare"];
+}
+else{ echo "Nota : " . $statisticiPerformance["nota"] ."<br>". $statisticiPerformance["content"] ."<br>". $statisticiPerformance["numarErori"];
+}
 
-echo "DESIGN<hr>" .$statisticiDesgin ."<hr>CODE QUALITY : HTML+CSS<hr>". $statisticiCodeQuality . "<hr>PERFORMANCE<hr>". $statisticiPerformance;
+
 /*
 
 $comparator = new Comparator();
