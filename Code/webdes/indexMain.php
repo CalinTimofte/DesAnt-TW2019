@@ -5,7 +5,7 @@
 require_once 'core/dbInteraction.php';
 require_once 'ApiCalls/Design/designStats.php';
 require_once 'ApiCalls/CodeQuality/codeQualityStats.php';
-require_once 'ApiCalls/Performance/performanceStats.php';
+// require_once 'ApiCalls/Performance/performanceStats.php';
 
 
  if(!isset($_GET['url']) or $_GET['url'] == '') {
@@ -27,7 +27,14 @@ $response = array("link"=> $url, "count" => $db->get_count() , "results" => $old
 //daca count e 0 atunci e link nou, nu e in bd, altfel, cate intrari vechi a gasit 
 if($response['count']!=0)
 {
-//	echo json_encode($response['results'], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+    // echo json_encode($response['results'][0]['reg_date'], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+    echo  '<form method="post" action="/webdes/userInterface/statistici.html">';
+    echo '<select name="versions">' . '</br>';
+    foreach($response['results'] as $result)
+    echo '<option value = "' . ($result['id']) . '">' . ($result['reg_date']) . '</option>' . "</br>";
+    echo '</select>';
+    echo '<input type="submit">';
+    echo '</form>';
 //	alege clientul cum vrea sa fie testat, cu comparare sau fara 
 } //else echo "Nu s-a gasit in baza de date";
 
@@ -58,16 +65,16 @@ $statisticiCodeQuality = $statsQuality->calculeaza($url);
 
 //3.Performance
 
-$statsPerformance =new StatsPerformance();
-$statisticiPerformance = $statsPerformance->calculeaza($url);
+// $statsPerformance =new StatsPerformance();
+// $statisticiPerformance = $statsPerformance->calculeaza($url);
 
-if($statisticiPerformance["nota"]==-1)
-{
+// if($statisticiPerformance["nota"]==-1)
+// {
 	
-	echo $statisticiPerformance["descriereEroare"];
-}
-else{ echo "Nota : " . $statisticiPerformance["nota"] ."<br>". $statisticiPerformance["content"] ."<br>". $statisticiPerformance["numarErori"];
-}
+// 	echo $statisticiPerformance["descriereEroare"];
+// }
+// else{ echo "Nota : " . $statisticiPerformance["nota"] ."<br>". $statisticiPerformance["content"] ."<br>". $statisticiPerformance["numarErori"];
+// }
 
 
 /*
