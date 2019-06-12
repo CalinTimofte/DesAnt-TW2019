@@ -57,24 +57,33 @@ else{ echo "Nota : " . $statisticiDesgin["nota"] ."<br>". $statisticiDesgin["con
 }*/
 
 
-/*
+
 //2. Code quality
 $statsQuality =new StatsCodeQuality();
 $statisticiCodeQuality = $statsQuality->calculeaza($url); 
-*/
+
+if($statisticiCodeQuality["nota"]==-1)
+{
+	
+	echo $statisticiCodeQuality["descriereEroare"];
+}
+else{ echo "Nota : " . $statisticiCodeQuality["nota"] ."<br>". $statisticiCodeQuality["content"] ."<br> Erori :". $statisticiCodeQuality["numarErori"] ."<br>";
+}
+
 
 //3.Performance
 
-// $statsPerformance =new StatsPerformance();
-// $statisticiPerformance = $statsPerformance->calculeaza($url);
+$statsPerformance =new StatsPerformance();
+$statisticiPerformance = $statsPerformance->calculeaza($url);
 
-// if($statisticiPerformance["nota"]==-1)
-// {
+if($statisticiPerformance["nota"]==-1)
+{
 	
-// 	echo $statisticiPerformance["descriereEroare"];
-// }
-// else{ echo "Nota : " . $statisticiPerformance["nota"] ."<br>". $statisticiPerformance["content"] ."<br>". $statisticiPerformance["numarErori"];
-// }
+	echo $statisticiPerformance["descriereEroare"];
+}
+else{ echo "Nota : " . $statisticiPerformance["nota"] ."<br>". $statisticiPerformance["content"] ."<br> Erori :". $statisticiPerformance["numarErori"] ."<br>";
+}
+
 
 
 
