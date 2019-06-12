@@ -28,7 +28,7 @@ $response = array("link"=> $url, "count" => $db->get_count() , "results" => $old
 if($response['count']!=0)
 {
     // echo json_encode($response['results'][0]['reg_date'], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-    echo  '<form method="post" action="/webdes/userInterface/statistici.html">';
+    echo '<form method="POST" action="/webdes/userInterface/statistici.html">';
     echo '<select name="versions">' . '</br>';
     foreach($response['results'] as $result)
     echo '<option value = "' . ($result['id']) . '">' . ($result['reg_date']) . '</option>' . "</br>";
@@ -77,18 +77,22 @@ $statisticiCodeQuality = $statsQuality->calculeaza($url);
 // }
 
 
-/*
 
-$comparator = new Comparator();
-$nota = $comparator->acordaNota(erori categorie 1, 2, 3);
+// if(isset($_POST['versions'])){
+//     $comparator = new Comparator();
+//     $comparison_result = $comparator->compara($id, $statisticiDesgin["nota"], $statisticiDesgin["numarErori"], $statisticiPerformance["nota"], $statisticiPerformance["numarErori"], $statisticiCodeQuality["nota"], $statisticiCodeQuality["numarErori"]); //comparatorul comunica direct cu componenta care ia date din bd si ia erorile sa compare
+// }
 
-if(clientul vrea cu comparare a site-ului vechi)
-$comparator->compara($id); //comparatorul comunica direct cu componenta care ia date din bd si ia erorile sa compare
+// Aici mai este nevoie de o functie care sa afiseze comparatiile cum trebuie
+// De ex, -1 pe primul camp din $comparison_result inseamna : "Nota curenta este mai mica decat cea precedenta";
 
-afeseaza() // stats design, quality,performance, nota, (rezultatul compararii)
+// $nota = $comparator->acordaNota(erori categorie 1, 2, 3);
+
+// if(clientul vrea cu comparare a site-ului vechi)
+
+// afiseaza() // stats design, quality,performance, nota, (rezultatul compararii)
 
 
 
- */
 
 ?>
