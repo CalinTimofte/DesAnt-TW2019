@@ -20,7 +20,7 @@
             ),
             'headers' => $response->headers,
         ),
-        'response' => json_decode($response->body),
+        'response' => $response->body,
     );
 
     return $message;
