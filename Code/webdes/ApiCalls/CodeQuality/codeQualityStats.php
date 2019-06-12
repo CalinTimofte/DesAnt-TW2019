@@ -2,6 +2,8 @@
 /* Code quality stats -- apeleaza fiecare api de la code quality */
 require_once 'ApiCalls/CodeQuality/HTMLValidator.php';
 require_once 'ApiCalls/CodeQuality/CSSValidator.php';
+require_once 'ApiCalls/CodeQuality/EroriHTML.php';
+require_once 'ApiCalls/CodeQuality/EroriCSS.php';
 
 
 class StatsCodeQuality{
@@ -9,20 +11,23 @@ class StatsCodeQuality{
 
 $htmlValidationObj = new htmlValidator();
 $statsHTML =$htmlValidationObj->get_stats($link);
-// check for errors in header-ul de erori 
-//sent to erori-count 
-// erori-count returns erori+ nota specifica
 
+$erori = new Erori();
+ $err = new EroriHTML();
+  $rezultat1= $erori->get_errors($statsHTML,$err);
 
 $cssValidationObj = new CSSValidator();
 $statsCSS =$cssValidationObj->get_stats($link);
-// check for errors in header-ul de erori 
-//sent to erori-count 
-// erori-count returns erori+ nota specifica
-$rezultat = $statsHTML['response'] . "<br>" . $statsCSS['response'];
+ $err = new EroriCSS();
+   $rezultat2= $erori->get_errors($statsCSS,$err);
 
 
-// put them together in $rezultat
+$rezultat["nota"] = ($rezultat1["nota"] + $rezultat2["nota"] ) /2;
+$rezultat["descriereEroare"]=$rezultat1["descriereEroare"] . " <br>" .$rezultat2["descriereEroare"];
+$rezultat["content"] = $rezultat1["content"] . " <br>" . $rezultat2["content"];
+$rezultat["numarErori"]=$rezultat1["numarErori"] + $rezultat2["numarErori"] ;
+
+
 return $rezultat;
 }
 
