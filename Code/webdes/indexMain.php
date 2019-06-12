@@ -2,11 +2,11 @@
 
 /* client interaction */
 
-require_once 'core/dbInteraction.php';
 require_once 'ApiCalls/Design/designStats.php';
 require_once 'ApiCalls/CodeQuality/codeQualityStats.php';
-// require_once 'ApiCalls/Performance/performanceStats.php';
-
+ require_once 'ApiCalls/Performance/performanceStats.php';
+require_once 'core/dbInteraction.php';
+require_once 'UserInterface/statistici.php';
 
  if(!isset($_GET['url']) or $_GET['url'] == '') {
         header('Location: /webdes/userInterface/index.html');
@@ -27,14 +27,14 @@ $response = array("link"=> $url, "count" => $db->get_count() , "results" => $old
 //daca count e 0 atunci e link nou, nu e in bd, altfel, cate intrari vechi a gasit 
 if($response['count']!=0)
 {
-    // echo json_encode($response['results'][0]['reg_date'], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-    echo '<form method="POST" action="/webdes/userInterface/statistici.html">';
+   /* // echo json_encode($response['results'][0]['reg_date'], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+    echo '<form method="POST" action="/userInterface/statistici.php">';
     echo '<select name="versions">' . '</br>';
     foreach($response['results'] as $result)
     echo '<option value = "' . ($result['id']) . '">' . ($result['reg_date']) . '</option>' . "</br>";
     echo '</select>';
     echo '<input type="submit">';
-    echo '</form>';
+    echo '</form>';*/
 //	alege clientul cum vrea sa fie testat, cu comparare sau fara 
 } //else echo "Nu s-a gasit in baza de date";
 
@@ -62,17 +62,20 @@ else{ echo "Nota : " . $statisticiDesgin["nota"] ."<br>". $statisticiDesgin["con
 $statsQuality =new StatsCodeQuality();
 $statisticiCodeQuality = $statsQuality->calculeaza($url); 
 
-if($statisticiCodeQuality["nota"]==-1)
+header('Location: /webdes/userInterface/statistici.php');
+/*
+if(isset($statisticiCodeQuality['nota']))
 {
-	
-	echo $statisticiCodeQuality["descriereEroare"];
+  if($statisticiCodeQuality["nota"]==-1)
+{
+echo $statisticiCodeQuality["descriereEroare"] ;
 }
-else{ echo "Nota : " . $statisticiCodeQuality["nota"] ."<br>". $statisticiCodeQuality["content"] ."<br> Erori :". $statisticiCodeQuality["numarErori"] ."<br>";
-}
-
-
+else{
+echo "Nota : " . $statisticiCodeQuality["nota"] ."<br>". $statisticiCodeQuality["content"] ."<br>". $statisticiCodeQuality["numarErori"]; 
+} } ?>
+*/
 //3.Performance
-
+/*
 $statsPerformance =new StatsPerformance();
 $statisticiPerformance = $statsPerformance->calculeaza($url);
 
@@ -82,7 +85,7 @@ if($statisticiPerformance["nota"]==-1)
 	echo $statisticiPerformance["descriereEroare"];
 }
 else{ echo "Nota : " . $statisticiPerformance["nota"] ."<br>". $statisticiPerformance["content"] ."<br> Erori :". $statisticiPerformance["numarErori"] ."<br>";
-}
+}*/
 
 
 
