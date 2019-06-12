@@ -31,14 +31,14 @@ class dbInteraction extends dbModel {
     public function add_entry($link, $erori_design, $nota_design , $erori_quality  ,  $nota_quality,$erori_performance ,   $nota_performance  ) {
         $sql = "INSERT INTO istoricpagini (link, erori_design, nota_design, erori_quality, nota_quality, erori_performance, nota_performance) VALUES ( :link, :erori_design, :nota_design, :erori_quality, :nota_quality, :erori_performance, :nota_performance)";
         $query = $this->connection->prepare($sql);
-        $parameters = array( ':link' => $link, ':erori_design' => $erori_design, ':nota_design'=> $nota_design, ':erori_quality'=>$erori_quality ,' :nota_quality'=>$nota_quality, ':erori_performance'=>$erori_performance, ':nota_performance'=>$nota_performance);
+        $parameters = array( ':link' => $link, ':erori_design' => $erori_design, ':nota_design'=> $nota_design, ':erori_quality'=>$erori_quality ,':nota_quality'=>$nota_quality, ':erori_performance'=>$erori_performance, ':nota_performance'=>$nota_performance);
         $query->execute($parameters);
         return $this->connection->lastInsertId();
     }
 
 
 /*daca un utilizator vrea sa compare cu nota anterioara, functia returneaza intrarea din baza de date 
-(apelata din comparator) */
+ */
 public function get_entry($id)
 {
     $sql = "SELECT erori_design, nota_design, erori_quality, nota_quality, erori_performance, nota_performance FROM istoricpagini WHERE id = :id LIMIT 1";

@@ -19,15 +19,15 @@ class Comparator extends dbModel {
         $nrErr_codeQuality2 = $row['nota_quality'];
 
 if($nota_design > $nota_design2 )
-    $resultArr = "Design imbunatatit <br>";
+    $resultArr = "Design imbunatatit :". $nota_design2  ."<br>";
 else  $resultArr = "Design-ul a primit o nota mai mica decat in trecut : " . $nota_design2  ."<br>" ;
 
 if($nota_codeQuality > $nota_codeQuality2 )
-    $resultArr .= "Code quality imbunatatit <br>";
+    $resultArr .= "Code quality imbunatatit:". $nota_codeQuality2 . "<br>";
 else  $resultArr .= "Categoria \"code quality\" a primit o nota mai mica decat in trecut :". $nota_codeQuality2 . "<br>";
 
 if($nota_performance > $nota_performance2 )
-    $resultArr .= "Performance imbunatatit <br>";
+    $resultArr .= "Performance imbunatatit".$nota_performance2. "<br>";
 else  $resultArr .= "Categoria \"Performance\" a primit o nota mai mica decat in trecut:".$nota_performance2. "<br>";
 
         return $resultArr;
